@@ -33,7 +33,7 @@ namespace Tyuiu.BaimuhametovaMD.Sprint1.Task6.V5
             Console.WriteLine("* Результат:                                                              *");
             Console.WriteLine("***************************************************************************");
 
-            Console.WriteLine("Площадь квадрата: " + ds.CheckSymmetricalWords(text));
+            Console.WriteLine("Симметричные слова: " + ds.CheckSymmetricalWords(text));
             Console.ReadLine();
         }
     }

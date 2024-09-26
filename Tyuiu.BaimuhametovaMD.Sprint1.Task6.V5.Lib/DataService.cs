@@ -14,11 +14,8 @@ namespace Tyuiu.BaimuhametovaMD.Sprint1.Task6.V5.Lib
             foreach (string word in words)
             {
                 string reverse = new string(word.Reverse().ToArray());
-                Console.WriteLine(reverse);
-                Console.WriteLine(string.Compare(word, reverse));
                 if (string.Compare(word, reverse) == 0)
                 {
-                    Console.WriteLine(string.Compare(word, reverse));
                     res = res + string.Concat(", ", word);
                 }
             }
