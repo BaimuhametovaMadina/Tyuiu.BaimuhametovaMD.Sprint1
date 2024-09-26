@@ -11,7 +11,7 @@ namespace Tyuiu.BaimuhametovaMD.Sprint1.Task6.V5.Test
             DataService ds = new DataService();
             string text = "Казак помыл машину, его шалаш упал, каак";
             string res = ds.CheckSymmetricalWords(text);
-            Assert.AreEqual("Казак, шалаш, каак", res);
+            Assert.AreEqual("казак, шалаш, каак", res);
         }
     }
 }

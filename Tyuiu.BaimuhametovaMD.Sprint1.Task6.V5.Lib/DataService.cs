@@ -1,4 +1,5 @@
-﻿using tyuiu.cources.programming.interfaces.Sprint1;
+﻿using System.Text.RegularExpressions;
+using tyuiu.cources.programming.interfaces.Sprint1;
 
 namespace Tyuiu.BaimuhametovaMD.Sprint1.Task6.V5.Lib
 {
@@ -6,8 +7,22 @@ namespace Tyuiu.BaimuhametovaMD.Sprint1.Task6.V5.Lib
     {
         public string CheckSymmetricalWords(string value)
         {
-            value = value.Replace(",", "");
-            return value;
+            value = value.ToLower();
+            value = Regex.Replace(value, "[-.?!)(,:;'[0-9\\]]", "");
+            string[] words = value.Split(' ');
+            string res = new string(" ");
+            foreach (string word in words)
+            {
+                string reverse = new string(word.Reverse().ToArray());
+                Console.WriteLine(reverse);
+                Console.WriteLine(string.Compare(word, reverse));
+                if (string.Compare(word, reverse) == 0)
+                {
+                    Console.WriteLine(string.Compare(word, reverse));
+                    res = res + string.Concat(", ", word);
+                }
+            }
+            return res == " " ? "Симметричных слов нет" : res.Remove(0, 3);
         }
     }
 }
